@@ -1,0 +1,61 @@
+server {
+	listen 80;
+	server_name ${LOCAL_IP};
+	access_log /var/log/nginx/access.log;
+	return 301 https://$host:8443$request_uri;
+}
+
+server {
+	listen 443 ssl;
+	server_name ${LOCAL_IP};
+	ssl_certificate /etc/nginx/ssl/transcendence.crt;
+	ssl_certificate_key /etc/nginx/ssl/transcendence.key;
+	ssl_protocols TLSv1.2 TLSv1.3;
+
+	ssl_trusted_certificate /etc/nginx/ssl/transcendence.crt;
+
+	root /usr/share/nginx/html;
+
+	location / {
+		try_files $uri $uri/ index.html;
+	}
+
+	location /api/ {
+		rewrite ^/api/(.*)$ /$1 break;
+		proxy_pass ${WEB_SERVICE_URL};
+		proxy_set_header Host $host;
+		proxy_set_header X-Real-IP $remote_addr;
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header X-Forwarded-Proto $scheme;
+
+		proxy_http_version 1.1;
+		proxy_set_header Upgrade $http_upgrade;
+		proxy_set_header Connection "Upgrade";
+
+		add_header 'Access-Control-Allow-Origin' 'https://${LOCAL_IP}:8443' always;
+		add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS, PUT, DELETE';
+		add_header 'Access-Control-Allow-Headers' 'Content-Type';
+		add_header 'Access-Control-Allow-Credentials' 'true' always; # Permet l'envoi des cookies
+		
+		if ($request_method = OPTIONS) {
+			return 204;
+		}
+	}
+
+	location /static/ {
+		alias /usr/share/nginx/html/static/;
+		expires max;
+	}
+
+	location /avatars/ {
+		alias /usr/share/nginx/html/avatars/;
+		expires max;
+	}
+
+	location /media/ {
+		alias /usr/share/nginx/media/;
+	}
+
+	error_page 404 /index.html;
+
+}

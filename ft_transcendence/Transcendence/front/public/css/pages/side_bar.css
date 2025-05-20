@@ -1,0 +1,242 @@
+/* Conteneur principal */
+/* Conteneur principal qui englobe #right */
+#right_container {
+    width: 27vw; /* Un peu plus large pour englober #right */
+    position: fixed;
+    right: 0;
+    top: 60px;
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+}
+
+#open_social {
+    position: fixed;
+    right: 10px;
+    padding: 10px 15px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+/* Contenu du panneau latéral */
+#right {
+    top:0;
+    width: 25vw;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Barre de recherche */
+#search {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.inputField {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#searchResult {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    min-height: 50px;
+    padding: 5px;
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+/* Invitation */
+#invitation {
+    background-color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    padding: 2%;
+    display: flex;
+    flex-direction: space-between;
+    position: relative;
+}
+
+#invitations {
+    background-color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#infoInv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+.right_button {
+    height: auto;
+    position: absolute;
+    top: 10%;
+    right: 0; /* colle à l'extrême droite du parent */
+    display: flex;
+    width: auto; /* ou une largeur fixe si tu préfères, mais 10vw c’est souvent trop */
+}
+#notif {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(50, 35, 35);
+        font-size: 18px;
+        font-weight: bold;  
+        background-color: rgb(239, 32, 56);
+}
+
+/* Liste d'invitations */
+#listInvit {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    min-height: 50px;
+    padding: 5px;
+}
+
+/* Liste d'amis */
+#friendsList {
+    background-color: white;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    min-height: 10vh;
+    overflow-y: auto;
+    max-height: 30vh;
+}
+
+.friend {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.friend-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #007bff;
+    left: 0;
+}
+
+/* Username */
+.friend-username {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Status dot */
+.status-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.status-online {
+    background-color: green;
+}
+
+.status-offline {
+    background-color: red;
+}
+
+
+.user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+}
+
+.username {
+    font-weight: bold;
+    color: #333;
+}
+
+.alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+
+  .alert-box {
+    position: relative;
+
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .alert-buttons {
+    margin-top: 15px;
+  }
+
+  .alert-buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .alert-buttons button:first-child {
+    background-color: #007bff;
+    color: white;
+  }
+
+  .alert-buttons button:last-child {
+    background-color: #ccc;
+    color: black;
+  }
+
+  .progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    background: #007bff;
+    width: 0%;
+    animation: fillBar 10s linear forwards;
+  }
+
+  @keyframes fillBar {
+    0% { width: 0%; }
+    100% { width: 100%; }}

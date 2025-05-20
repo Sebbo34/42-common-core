@@ -1,0 +1,145 @@
+#chat_container {
+    width: 23vw;
+    position: fixed;
+    bottom: 80px;
+    left: 12%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    padding: 10px;
+	background-color: #006D77;
+    box-shadow: 0px 4prgb(61, 79, 128)gba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#open_container {
+    position: relative;
+    display: inline-block;
+    height: 5vh;
+    text-align: center;
+}
+
+#notif_chat {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(8, 8, 8);
+    font-size: 12px;
+    font-weight: bold;  
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: rgb(41, 212, 195);
+}
+
+#chat {
+    width: 22vw;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    height: 45vh;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#chat h1 {
+    text-align: center;
+    font-size: 20px;
+    color: #007bff;
+}
+
+#messages {
+    overflow-y: scroll;
+    padding: 10px;
+    background-color: rgb(240, 232, 232);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 33vh;
+    margin: 1vh;
+}
+
+.message {
+    margin-bottom: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin: 0.1vh;
+    padding: 0.1vh;
+}
+
+.sender {
+    font-weight: bold;
+    color: #221fc4;
+    margin-bottom: 5px;
+}
+
+.message-text {
+    color: black;
+}
+
+#input_box {
+    display: flex;
+    gap: 10px;
+}
+#messages {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#messages::-webkit-scrollbar {
+    display: none;
+}
+
+#messageInput {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#contextMenu {
+    position: absolute;
+    background: rgb(221, 216, 216);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    color: #333;
+}
+
+.menu-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item:hover {
+    background: #f0f0f0;
+}
+
+.invitation-message {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.sender {
+    font-weight: bold;
+    color: #007bff;
+}
+
+#chat_container .btn-primary {
+    width: fit-content;
+}

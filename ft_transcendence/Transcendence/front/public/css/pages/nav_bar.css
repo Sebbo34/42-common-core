@@ -1,0 +1,36 @@
+.navbar {
+	background-color: #006D77;
+	border-bottom: 3px solid #EDF6F9;
+	font-size: 20px;
+	height: 80px;
+	z-index: 100;
+}
+
+.nav-link {
+	color: #ffddd2;
+	position: relative;
+	padding: 5px 10px;
+	transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+	color: #ffddd2;
+}
+
+.nav-link::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: 2px outset #ffddd2;
+	border-radius: 7px;
+	transition: all 0.3s ease;
+	opacity: 0;
+}
+
+.nav-link:hover::before {
+	opacity: 1;
+	transform: scale(1.05);
+}

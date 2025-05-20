@@ -1,0 +1,118 @@
+/* Styles pour le conteneur principal */
+
+#online_menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    height: 60vh;
+    text-align: center;
+    line-height: 5vh;
+}
+
+#create {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 5vh;
+}
+
+#games_available {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    height: 45vh;
+    text-align: center;
+    line-height: 5vh;
+    overflow: scroll;
+}
+
+#online_menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    height: 60vh;
+    text-align: center;
+    line-height: 5vh;
+}
+
+#game_lobby {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Fond sombre semi-transparent */
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: Arial, sans-serif;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Ajout d'une transition fluide */
+}
+
+/* Effet hover : agrandit légèrement le container */
+#game_lobby:hover {
+    transform: scale(1.05); /* Agrandit légèrement */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4); /* Accentue l'ombre */
+}
+
+/* Style pour le nom de l'hôte */
+#host {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: linear-gradient(45deg, #ff8c00, #ff4500); /* Dégradé orange */
+    border-radius: 5px;
+}
+
+/* Style pour l'ID du jeu */
+#game_id {
+    font-size: 18px;
+    padding: 8px;
+    background: #222;
+    border-radius: 5px;
+    color: #ffcc00; /* Couleur jaune pour contraster */
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    z-index: 9999;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Style du spinner */
+.spinner {
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+/* Animation du spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

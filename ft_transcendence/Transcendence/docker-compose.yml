@@ -1,0 +1,58 @@
+services:
+
+  nginx:
+    build: ./front/nginx
+    container_name: nginx
+    depends_on:
+      - web
+    env_file:
+      - .env
+    volumes:
+       - ./front/public:/usr/share/nginx/html
+       - ./backend/media:/usr/share/nginx/media
+    ports:
+       - "8443:443"
+       - "8080:80"
+    networks:
+      - pong_network
+    restart: on-failure
+
+  db:
+    image: postgres:17.2
+    container_name: postgres_db
+    env_file:
+      - .env
+    volumes:
+      - ./data/postgres_db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - pong_network
+    restart: on-failure
+  
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6378:6378"
+    networks:
+      - pong_network
+    restart: on-failure
+  web:
+    build: ./backend
+    container_name: transcendence_web
+    depends_on:
+      - db
+    env_file:
+      - .env
+    volumes:
+      - ./backend:/backend
+    ports:
+      - "8000:8000"
+    networks:
+      - pong_network
+    restart: on-failure
+
+networks:
+  pong_network:
+    driver: bridge

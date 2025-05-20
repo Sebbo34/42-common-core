@@ -1,0 +1,168 @@
+#dashboard-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 90%;
+	max-width: 1200px;
+	padding: 0;
+	margin-top: -50vh;
+	position: relative;
+	top: -60px;
+}
+
+#app #dashboard-container {
+	margin: 0 auto;
+}
+
+#dashboard-blocks-wrapper {
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+	width: 100%;
+}
+
+#stats-pie-wrapper {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	background-color: #fff;
+	padding: 20px;
+	border: 2px solid #006d77;
+	border-radius: 15px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#stats-summary {
+	color: #333;
+	font-size: 1rem;
+	line-height: 1.2;
+	background-color: #f8f9fa;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+#games-details-container {
+	flex: 2;
+	background-color: #fff;
+	padding: 20px;
+	border: 2px solid #006d77;
+	border-radius: 15px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	max-height: 525px;
+	overflow-y: auto;
+}
+
+#games-details {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#title-game-details {
+	color: #333;
+	font-style: bold;
+	font-size: 2em;
+}
+
+#games-details th,
+#games-details td {
+	text-align: center;
+	font-size: 0.9rem;
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+
+#games-details th {
+	background-color: #006d77;
+	color: white;
+}
+
+#games-details td {
+	color: #333;
+}
+
+button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: auto;
+	height: 50px;
+	padding: 0px 30px;
+	font-size: 1rem;
+	background-color: #006d77;
+	color: white;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: #098894;
+}
+
+#friends-button,
+#return-button {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#friends-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 120px;
+	height: 40px;
+	padding: 0 30px;
+	font-size: 1rem;
+	background-color: #006d77;
+	color: white;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	margin-top: 5px;
+	margin-left: 15px;
+}
+
+#friends-button:hover {
+	background-color: #098894;
+}
+
+#return-button {
+	display: block;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-bottom: 20px;
+}
+
+#title-button-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#stats-title {
+	font-size: 2em;
+	font-weight: bold;
+	color: #006d77;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	text-align: center;
+	margin-bottom: 15px;
+	padding: 10px 15px;
+	border: 2px solid #f0fdfa;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#stats-title:hover {
+	background-color: #d1e8eb;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

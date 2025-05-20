@@ -1,0 +1,23 @@
+/* INDEX */
+@import url('index/global.css');
+
+/* PAGES */
+@import url('pages/buttons.css');
+@import url('pages/footer.css');
+@import url('pages/nav_bar.css');
+@import url('pages/pong_menu.css');
+@import url('pages/profile.css');
+@import url('pages/welcome.css');
+@import url('pages/game.css');
+@import url('pages/game_settings.css');
+@import url('pages/join.css');
+@import url('pages/auth.css');
+@import url('pages/code.css');
+@import url('pages/dashboard.css');
+@import url('pages/page_404.css');
+@import url('pages/chat.css');
+@import url('pages/tournament_lobby.css');
+@import url('pages/friends.css');
+@import url('pages/social.css');
+@import url('pages/user_profile.css');
+@import url('pages/side_bar.css');

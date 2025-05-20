@@ -1,0 +1,13 @@
+Django>=5.1.4
+djangorestframework-simplejwt==5.2.2
+setuptools==75.8.0
+psycopg2-binary==2.9.10
+requests
+Pillow
+daphne
+channels==4.1.0
+django-cors-headers
+python-decouple
+channels_redis==4.1.0
+asgiref
+ping3

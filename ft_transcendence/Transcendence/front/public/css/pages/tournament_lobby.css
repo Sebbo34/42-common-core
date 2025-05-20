@@ -1,0 +1,99 @@
+#tournament_lobby {
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 70%;
+    height: 60%;
+}
+
+#create_tournament_button {
+	margin-top: 20px;
+	margin-bottom: 20px;
+    margin-left: 375px;
+}
+
+#final, #demi, #winner_round {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 3%;
+    position: relative;
+    top: 50%;
+    left:40%;
+    transform: translate(-50%, -50%);
+}
+
+#final { width: 16%; }
+#demi { width: 40%;}
+#winner_round{ width:10%;
+    transform: translate(-10%, -50%);
+ }
+
+.match {
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    margin: 3%;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #eee;
+    width: 6vw;
+    height: 12vh; 
+    border: 1px solid #333;
+    margin: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+.player img {
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    object-fit: cover; 
+    margin-bottom: 10px;
+    transform: translate(3%, 20%);
+
+}
+
+.player .name {
+    font-size: 1.0rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: capitalize;
+    bottom: 0;
+    transform: translate(3%, 10%);
+}
+
+.connector {
+    width: 2px;
+    height: 20px;
+    background-color: #333;
+    margin: 5px auto;
+}
+.winner {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #27ae60;
+}
+
+#tournamentCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-15%, -20.5%);
+
+}

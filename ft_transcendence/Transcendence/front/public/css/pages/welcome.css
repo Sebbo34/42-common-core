@@ -1,0 +1,48 @@
+.card {
+    background-color: #83c5be;
+    border-color: transparent;
+    margin-bottom: 50px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body {
+    background-color: #ffddd2;
+    color: #233142;
+    padding: 1vh;
+    border-radius: 2em;
+    padding: 17px;
+}
+
+.card-cat {
+    width: 950px;
+    height: max-content;
+}
+
+.text-col {
+    white-space: pre-line;
+    font-size: 14px;
+}
+
+.img-fluid {
+    border-radius: 1em;
+    width: 500px;
+    height: max-content;
+}
+
+.img-fluid:hover {
+	cursor: pointer;
+    transform: scale(1.05);
+    filter: brightness(1.2);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .text-col {
+        margin-top: 20px;
+    }
+}

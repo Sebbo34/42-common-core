@@ -1,0 +1,41 @@
+.code-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.code-input {
+    margin: 0;
+    padding: 0;
+    width: 45px;
+    height: 50px;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+}
+
+.code-input:focus {
+    border-color: #f1c40f;
+}
+
+#code_button {
+    width: 100%;
+    max-width: 320px;
+    margin: auto;
+    background-color: #006d77;
+    padding: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+}
+
+#code_button:hover {
+    background-color: #098894;
+}

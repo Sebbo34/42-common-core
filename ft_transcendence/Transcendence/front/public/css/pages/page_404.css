@@ -1,0 +1,206 @@
+.page-404 {
+    background: #83C5BE;
+    max-height: 100vw;
+    width: 100vw;
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vmin;
+}
+
+.page-404 .ghost {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: -30vmin;
+    background: white;
+    color: white;
+    height: 25vmin;
+    width: 25vmin;
+    border-radius: 50%;
+    box-shadow: 1vmin 0 2vmin, -1vmin 0 2vmin, 1vmin -1vmin 1vmin, -1vmin -1vmin 1vmin;
+    animation: float 2s ease-in-out infinite;
+}
+
+.page-404 .ghost::before {
+    position: absolute;
+    content: '';
+    background: white;
+    color: white;
+    height: 25vmin;
+    width: 25vmin;
+    top: 14vmin;
+    box-shadow: 1vmin 0 2vmin, -1vmin 0 2vmin, 1vmin -1vmin 1vmin, -1vmin -1vmin 1vmin;
+}
+
+.page-404 .ghost::after {
+    position: absolute;
+    content: '';
+    background: #1C0330;
+    height: 8vmin;
+    width: 30vmin;
+    border-radius: 50%;
+    top: 50vmin;
+    animation: blink 2s infinite;
+}
+
+.page-404 .face {
+    position: relative;
+    background: black;
+    height: 2vmin;
+    width: 2vmin;
+    border-radius: 50%;
+    box-shadow: -1vmin 1vmin pink;
+    left: 2vmin;
+}
+
+.page-404 .face::before {
+    position: absolute;
+    content: '';
+    background: black;
+    height: 2vmin;
+    width: 2vmin;
+    border-radius: 50%;
+    box-shadow: 1vmin 1vmin pink;
+    left: 10vmin;
+}
+
+.page-404 .face::after {
+    position: absolute;
+    content: '';
+    background: black;
+    height: 2vmin;
+    width: 2vmin;
+    border-radius: 50%;
+    left: 5vmin;
+    top: 2.5vmin;
+    box-shadow: 0 0.5vmin 0.5vmin black, 0 -0.5vmin 0.5vmin black;
+}
+
+.page-404 .arms {
+    position: relative;
+    background: white;
+    height: 5vmin;
+    width: 8vmin;
+    border-radius: 50%;
+    left: 16vmin;
+    top: 10vmin;
+    transform: rotate(-15deg);
+    box-shadow: 1vmin 0 2vmin, 1vmin -1vmin 1vmin;
+}
+
+.page-404 .arms::before {
+    position: absolute;
+    background: white;
+    content: '';
+    height: 5vmin;
+    width: 8vmin;
+    border-radius: 50%;
+    left: -27vmin;
+    top: -7vmin;
+    transform: rotate(30deg);
+    box-shadow: -1vmin 0 2vmin, -1vmin -1vmin 1vmin;
+}
+
+.page-404 .bottom {
+    position: relative;
+    background: white;
+    height: 6vmin;
+    width: 6vmin;
+    border-radius: 50%;
+    top: 28vmin;
+    left: -14vmin;
+    box-shadow: 1vmin 1vmin 2vmin, -1vmin 1vmin 2vmin, 2vmin -1vmin 1vmin, -2vmin -1vmin 1vmin;
+}
+
+.page-404 .bottom::before {
+    position: absolute;
+    content: '';
+    background: white;
+    height: 6vmin;
+    width: 6vmin;
+    border-radius: 50%;
+    left: 18vmin;
+    box-shadow: 1vmin 1vmin 2vmin, -1vmin 1vmin 2vmin, 2vmin -1vmin 1vmin, -2vmin -1vmin 1vmin;
+}
+
+.page-404 .bottom::after {
+    position: absolute;
+    content: '';
+    background: white;
+    height: 6vmin;
+    width: 6vmin;
+    border-radius: 50%;
+    left: 9vmin;
+    box-shadow: 1vmin 1vmin 2vmin, -1vmin 1vmin 2vmin, 2vmin -1vmin 1vmin, -2vmin -1vmin 1vmin;
+}
+
+.page-404 .message {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 2vmin;
+    margin-bottom: -30vmin;
+    background-color: transparent;
+    text-shadow: 0 0 5px #d8bfd8, 0 0 10px #dda0dd, 0 0 15px #e6e6fa;
+    animation: spookyText 4s infinite ease-in-out;
+}
+
+.page-404 .ghost,
+.page-404 .message {
+    margin: 0;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(1vmin);
+    }
+    50% {
+        transform: translateY(3vmin);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(1vmin);
+    }
+}
+
+@keyframes blink {
+    0% {
+        background: #272625;
+    }
+    50% {
+        background: #272625;
+        transform: translateY(-1vmin);
+    }
+    100% {
+        background: #272625;
+    }
+}
+
+@keyframes spookyText {
+    0% {
+        color: #f8f8ff;
+        text-shadow: 0 0 5px #d8bfd8, 0 0 10px #dda0dd, 0 0 15px #e6e6fa;
+    }
+    50% {
+        color: #add8e6;
+        text-shadow: 0 0 10px #add8e6, 0 0 15px #b0e0e6, 0 0 20px #87ceeb;
+        transform: scale(1.1);
+    }
+    100% {
+        color: #f8f8ff;
+        text-shadow: 0 0 5px #d8bfd8, 0 0 10px #dda0dd, 0 0 15px #e6e6fa;
+        transform: scale(1);
+    }
+}

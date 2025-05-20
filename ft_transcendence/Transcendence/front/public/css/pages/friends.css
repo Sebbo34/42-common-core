@@ -1,0 +1,254 @@
+.friends-page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #f9f9f9;
+	padding: 30px;
+	border-radius: 20px;
+	width: 70%;
+	margin: auto;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-friend-section,
+.friends-list-section {
+	width: 90%;
+	margin: 15px 0;
+}
+
+.add-friend-section h2,
+.friends-list-section h2 {
+	font-size: 1.5rem;
+	color: #333;
+}
+
+.add-friend-form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+.add-friend-form label {
+	font-size: 1rem;
+	color: #333;
+}
+
+.add-friend-form input,
+.add-friend-form button {
+	width: 200px;
+	max-width: 100%;
+	font-size: 1rem;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.add-friend-form input {
+	height: 30px;
+	padding: 10px;
+	border: 2px solid #ccc;
+}
+
+.add-friend-form button {
+	height: 45px;
+	background-color: #006d77;
+	color: #fff;
+	border: none;
+	transition: background-color 0.3s ease;
+}
+
+.add-friend-form button:hover {
+	background-color: #098894;
+}
+
+.friends-list-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	overflow-y: auto;
+	max-height: 400px;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+}
+
+.friend-item {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 140px;
+	text-align: center;
+	gap: 5px;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease-in-out;
+	overflow: visible;
+}
+
+.friend-item img {
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	border: 2px solid #006d77;
+}
+
+.friend-item p {
+	font-size: 1rem;
+	color: #333;
+	margin: 5px 0;
+}
+
+.friend-item .btn-primary {
+	width: 100px;
+	height: 35px;
+	font-size: 0.9rem;
+	background-color: #006d77;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.friend-item .btn-primary:hover {
+	background-color: #098894;
+}
+
+.friend-item .btn-primary:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.friend-item .btn-danger {
+	font-size: 0.8rem;
+	height: 30px;
+	padding: 4px 10x;
+	background-color: rgba(220, 53, 69, 0.2);
+	color: #dc3545;
+	border: 1px solid #dc3545;
+	border-radius: 4px;
+	opacity: 0.7;
+	transition: opacity 0.3s ease, background-color 0.3s ease;
+	margin-top: 4px;
+	cursor: pointer;
+}
+
+.friend-item .btn-danger:hover {
+	opacity: 1;
+	background-color: rgba(220, 53, 69, 0.3);
+}
+
+.btn-secondary {
+	margin-top: 10px;
+	background-color: #f0f0f0;
+	color: #333;
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.history-section .btn-secondary {
+	margin-top: 20px;
+	background-color: #006d77;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+}
+
+.history-section .btn-secondary:hover {
+	background-color: #098894;
+}
+
+.action-buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	margin-top: 10px;
+}
+
+.friend-item .friend-status {
+	position: relative;
+	padding-left: 18px;
+	margin: 4px 0;
+}
+
+.friend-item .friend-status::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: gray;
+}
+
+.friend-item .friend-status.online::before {
+	background-color: #4cc769;
+}
+
+.match-history {
+	position: absolute;
+	margin-left: 8px;
+	left: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+	width: min(600px, 90vw);
+	max-height: 30vh;
+	overflow-y: auto;
+	background-color: #fff;
+	padding: 10px;
+	border: 1px solid #ccc;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
+}
+
+.match-history p {
+	margin: 0 0 10px;
+	font-weight: bold;
+}
+
+.match-history table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: auto;
+}
+
+.match-history th,
+.match-history td {
+	border: 1px solid #ccc;
+	padding: 10px;
+	text-align: center;
+	word-wrap: break-word;
+}
+
+.match-history th {
+	background-color: #006d77;
+	color: #fff;
+}
+
+.friends-list-container.history-open {
+	overflow: visible !important;
+}
+
+.friends-list-container.history-open .friend-item {
+	display: none;
+}
+
+.friends-list-container.history-open .friend-item.active {
+	display: flex;
+}
+
+@keyframes blink {
+	0%, 100% {opacity: 1;}
+	50% {opacity: 0;}
+}
+
+.friend-item .friend-status.online::before {
+	animation: blink 2s infinite;
+}

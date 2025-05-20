@@ -1,0 +1,9 @@
+log.txt
+.env
+data
+backend/app/__pycache__
+backend/app/migrations
+backend/pong_project/__pycache__
+backend/media/avatars/*
+!backend/media/avatars/default.png
+todo_list.txt

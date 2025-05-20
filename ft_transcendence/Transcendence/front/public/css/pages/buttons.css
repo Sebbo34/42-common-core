@@ -1,0 +1,27 @@
+.btn-home {
+	border: 2px solid #ccc;
+	background-color: #edf6f9;
+	color: var(--base-white);
+	position: relative;
+	width: 50vh;
+	height: 15vh;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	transition: 0.4s;
+	border-radius: 5px;
+	font-size: 1.5rem;
+	z-index: 10;
+}
+
+#home-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	height: 70vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+}
+
